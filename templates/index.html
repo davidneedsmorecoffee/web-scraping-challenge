@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- https://getbootstrap.com/docs/4.3/getting-started/download/ -->
+<!-- https://stackoverflow.com/questions/44666837/flask-producing-html-table-as-a-string-not-a-table-python-2 -->
+<!-- https://stackoverflow.com/questions/40760441/exclude-unwanted-tag-on-beautifulsoup-python -->
+<!-- https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates -->
+<!-- https://stackoverflow.com/questions/45259568/printing-more-than-one-image-per-line-in-flask -->
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Misson to Mars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+  </head>
+  <body class="text-white" style = "background-color:black">
+    <!-- <h1>Hello, world!</h1> -->
+    <div class = "container"></div>
+
+        <div class="jumbotron text-center" style = "background-image: url(https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14832_hires.jpg); background-size: 100%">
+            <h1 style="color:rgb(226, 193, 171)">Mission to Mars: </h1>
+            <h5>This webpage allows you to scrape the latest news, facts, and images specific to mars</h5>
+            <p></p>
+            <h6>BeautifulSoup, flask, time, splinter, PyMongo, and pandas were used in Python to pull data to and from mongoDB</h6>
+            <p></p>
+            <p class="scrape_button">
+                <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars Data!</a>
+            </p>
+        </div>
+
+        <!-- Mars news -->  
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8">
+                        <h2 class="section" style="color:rgb(224, 174, 141)">Mars News</h2>
+                        <h4 class="title"><b>{{mars.news_title}}</b></h4>
+                        <h5>{{mars.news_paragraph}}</h5>
+                        <br>
+                </div>
+            </div>
+        </div>
+
+        <!--Featured Mars Image -->
+        <div class="container">
+            <div class="row">
+                <!--Image-->
+                <div class="col-sm-12 col-md-8 col-lg-8">
+                    <h3 style="color:rgb(224, 174, 141)">Featured Mars Image</h3>
+                        <img src="{{mars.featured_image_url}}" style="max-width: 100%; margin-top:8px; margin-bottom:50px;">
+                </div>
+                <!--Current Weatehr on Mars + Mars Facts -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <!--Current Weatehr on Mars-->
+                            <h3 style="color:rgb(224, 174, 141)">Current Weather on Mars</h3>
+                            <p>{{mars.weather}}</p>
+                            <br>
+                            <!--Mars Facts-->
+                            <!-- https://stackoverflow.com/questions/44666837/flask-producing-html-table-as-a-string-not-a-table-python-2 -->
+                            <h4 style="color:rgb(224, 174, 141)">Mars Facts</h4>
+                            {{mars.facts | safe}}
+                            <br>
+                            <br>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!-- Mars hemispheres images-->
+        <div class="container" >
+            <h3 style="color:rgb(224, 174, 141)" class="text-left">Mars Hemispheres Images</h3>
+                <div class="col-md-12 col-lg-12"></div>
+                    <div class="row">
+                        <!-- Insert mars hemisphere images via loop; col-6 so there are two per 'row' -->
+                        {% for i in mars.hemispheres %}
+                        <div class="col-md-6 col-lg-6">
+                            <img src="{{i.img_url}}" style="max-width: 80%; margin-left: 40px; margin-right:40; margin-top:30px; margin-bottom:30px;">
+                            <h5 class="text-center">{{i.title}}</h5>
+                            <br>
+                        </div>
+                        {% endfor %}
+                    </div>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
