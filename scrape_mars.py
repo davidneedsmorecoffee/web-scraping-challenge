@@ -78,7 +78,7 @@ def scrape_all():
     
     #https://www.datacamp.com/community/tutorials/scraping-reddit-python-scrapy
     #https://stackoverflow.com/questions/53586149/split-string-from-beautifulsoup-output-in-a-list
-    
+    #https://stackoverflow.com/questions/40760441/exclude-unwanted-tag-on-beautifulsoup-python
     # sometimes the tweet has an image which can result in a link in the text scraping
     # the 'try' tries to extract and remove the image link via .find('a') if it's present
     # if the image link is not present then 'except AttributeError' will kick in,
