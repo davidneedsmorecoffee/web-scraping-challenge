@@ -38,7 +38,7 @@ Different web content from the NASA website was scraped, including:
 
 ### Mars Hemispheres
 
-* Obtain high resolution images for each of Mar's hemispheres from the the USGS Astrogeology website [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to 
+* Obtain high resolution images for each of Mar's hemispheres from the the [USGS Astrogeology website](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars).
 * Set up scraper to click on each of the links to the hemispheres to identify the image url to the full resolution images.
 * Scrape both the image url string for the full resolution hemisphere images, as well as the the Hemisphere title containing the hemisphere name. 
 * Python dictionary was used to store the data using the keys - one for image of the url (`img_url`), and one for the title of the image (`title`) - to create a list which contains one dictionary for each Mars hemisphere.
@@ -48,8 +48,8 @@ Different web content from the NASA website was scraped, including:
 
 * Used MongoDB with Flask templating and created a new HTML page to displays all of the information that was scraped earlier (see above).
 
-* The Jupyter notebook described earlier (`scrape_mars.ipynb`) was converted into a `Python` script (`scrape_mars.py`) 
-  * contains a function called `scrape` which will execute all of the scraping code (see above)
+* The Jupyter notebook described earlier (`scrape_mars.ipynb`) was converted into a `Python` script (`scrape_mars.py`).
+  * contains a function called `scrape` which will execute all of the scraping code (see above).
   * results in one Python dictionary containing all of the scraped data.
 
 * Created a route called `/scrape` which imported the `scrape_mars.py` script and call the `scrape` function.
