@@ -19,12 +19,11 @@ Different web content from the NASA website was scraped, including:
 
 ### NASA Mars News
 
-* [NASA Mars News Site](https://mars.nasa.gov/news/)
-  * Extracted the latest News Title and Paragraph Text. A
+* Extracted the latest News Title and Paragraph Text from [NASA Mars News Site](https://mars.nasa.gov/news/)
 
 ### JPL Mars Space Images (Featured Image)
 
-* JPL Featured Space Image [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
+* Scraped JPL Featured Space Image from the [JPL NASA website](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
  * `splinter` was used to navigate the site and find the full size current Featured Mars Image `.jpg` file. 
  * Identified the image url for full size image
 
