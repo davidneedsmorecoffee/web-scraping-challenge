@@ -3,7 +3,7 @@
 This is a demo of creating a web app based on web scraping results of specific content from NASA websites.
 See images of the final product in the `screenshots` folder
 
-* `Splinter` was used to navigate the sites when needed
+* `Splinter` was used to navigate the sites when needed.
 * `BeautifulSoup` was used to help find and parse out the necessary data.
 * `PyMongo` was used for CRUD applications for the database. 
 * `Bootstrap` was used to structure the HTML template.
@@ -29,7 +29,7 @@ Different web content from the NASA website was scraped, including:
 
 ### Mars Weather
 
-* Scraped the latest Mars weather tweet from the Mars Weather twitter account [here](https://twitter.com/marswxreport?lang=en)
+* Scraped the latest Mars weather tweet from the [official Mars Weather twitter account](https://twitter.com/marswxreport?lang=en).
 
 ### Mars Facts
 
