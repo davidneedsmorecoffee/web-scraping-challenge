@@ -58,4 +58,4 @@ Different web content from the NASA website was scraped, including:
 * Created a root route `/` which queried the Mongo database, and then pass the various scraped Mars data into an HTML to display the data.
 
 * Created a template HTML file (`index.html`) which will utilize the Mars data dictionary (containing the scraped data described earlier), and display all of the data in the appropriate HTML elements. 
-  * see images of the final product in the `screenshots` folder
+  * see images of the final product in the `screenshots` folder.
