@@ -1,10 +1,10 @@
 # Web Scraping of NASA website content
 
 This is a demo of creating a web app based on web scraping results of specific content from NASA websites.
-* Splinter was used to navigate the sites when needed
-* BeautifulSoup was used to help find and parse out the necessary data.
-* PyMongo was used for CRUD applications for the database. 
-* Bootstrap was used to structure the HTML template.
+* `Splinter` was used to navigate the sites when needed
+* `BeautifulSoup` was used to help find and parse out the necessary data.
+* `PyMongo` was used for CRUD applications for the database. 
+* `Bootstrap` was used to structure the HTML template.
 
 This was done in two major steps.
 
