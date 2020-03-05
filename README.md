@@ -1,7 +1,7 @@
 # Web Scraping of NASA website content
 
 This is a demo of creating a web app based on web scraping results of specific content from NASA websites.
-* See images of the final product in the `screenshots` folder
+See images of the final product in the `screenshots` folder
 
 * `Splinter` was used to navigate the sites when needed
 * `BeautifulSoup` was used to help find and parse out the necessary data.
