@@ -102,6 +102,7 @@ def scrape_all():
     mars_facts = pd.read_html(url)
     mars_facts = mars_facts[0].rename(columns={0: "Facts", 1:"Values"})
     
+    
     mars_facts.set_index('Facts', inplace=True)
     mars_facts_html = mars_facts.to_html()
 
